@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Text Helper",
+    "description": "Helps you read text",
+    "version": "1.0",
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": "icon.png"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "content-scripts/replace.js"
+            ],
+            "css": [
+                "content-scripts/text.css"
+            ]
+        }
+    ]
+}
